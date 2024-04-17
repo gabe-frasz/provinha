@@ -1,0 +1,55 @@
+main h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+main p {
+  margin-bottom: 0.5rem;
+  margin-inline: auto;
+  max-width: 113ch;
+}
+main p:last-of-type {
+  margin-bottom: 0;
+}
+
+.red-light, .blue-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  border-radius: 99px;
+  z-index: -1;
+}
+.red-light {
+  box-shadow: 0px 0px 100px 100px #ff000055;
+  animation: dancing-lights 4s linear forwards infinite;
+}
+.blue-light {
+  box-shadow: 0px 0px 100px 100px #0000ff55;
+  animation: dancing-lights 4s linear forwards reverse infinite;
+}
+
+@keyframes dancing-lights {
+  0% {
+    top: 50%;
+    left: 50%
+  }
+  25% {
+    top: 60%;
+    left: 60%;
+  }
+  50% {
+    top: 70%;
+    left: 50%;
+  }
+  75% {
+    top: 60%;
+    left: 40%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
